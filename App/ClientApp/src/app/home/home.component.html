@@ -1,0 +1,11 @@
+<h2>My id: {{ connectionId  }}</h2>
+<h3>Users</h3>
+<h4 *ngIf="!myTurn">User {{ users[activeUser] }} turn</h4>
+<h4 *ngIf="myTurn">It's my turn!</h4>
+<ul>
+  <li *ngFor="let user of users">{{ user }}</li>
+</ul>
+
+<button mat-button (click)="openDialog()">Open dialog</button>
+
+
